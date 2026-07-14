@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BotWap Nails — sua atendente no WhatsApp, 24h por dia</title>
+<meta name="description" content="A assistente inteligente que responde suas clientes no WhatsApp, agenda horários e cuida do seu studio de unhas enquanto você trabalha.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<header class="nav">
+  <a href="#" class="brand">
+    <span class="brand-drop"></span>
+    <span class="brand-name">BotWap <em>Nails</em></span>
+  </a>
+  <nav class="nav-links">
+    <a href="#como-funciona">Como funciona</a>
+    <a href="#demo">Ver conversa</a>
+    <a href="#planos">Planos</a>
+    <a href="#faq">Dúvidas</a>
+  </nav>
+  <a href="#cta" class="btn btn-primary btn-sm">Quero testar</a>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="hero-copy">
+    <span class="pill">✦ Feito pra nail designers</span>
+    <h1>Sua atendente no WhatsApp, <em>trabalhando por você</em> 24h por dia.</h1>
+    <p class="lead">
+      A BotWap responde suas clientes na hora, tira dúvidas sobre serviços,
+      mostra horários livres e agenda — enquanto você foca no que ama fazer: unhas lindas.
+    </p>
+    <div class="hero-actions">
+      <a href="#cta" class="btn btn-primary">Começar agora</a>
+      <a href="#demo" class="btn btn-ghost">Ver uma conversa ↓</a>
+    </div>
+    <ul class="hero-bullets">
+      <li>✿ Responde em segundos, sem você digitar</li>
+      <li>✿ Agenda sem conflito de horário</li>
+      <li>✿ Aprende sobre o seu studio</li>
+    </ul>
+  </div>
+
+  <!-- Mockup celular -->
+  <div class="phone-wrap">
+    <div class="phone">
+      <div class="phone-notch"></div>
+      <div class="phone-screen">
+        <div class="wa-header">
+          <div class="wa-avatar">B</div>
+          <div>
+            <div class="wa-name">BotWap • Studio Marina</div>
+            <div class="wa-status">online agora</div>
+          </div>
+        </div>
+        <div class="wa-body" id="waHero">
+          <div class="wa-msg wa-in">Oi! Vi seu Insta 💕 vocês tão com horário sábado?</div>
+          <div class="wa-msg wa-out">Oii, tudo bem? 💗 Sábado eu tenho <b>10h</b> e <b>15h30</b> livres. Qual serviço você quer fazer?</div>
+          <div class="wa-msg wa-in">Gel na mão, sem desenho</div>
+          <div class="wa-msg wa-out">Perfeito! Alongamento em gel sai por <b>R$ 140</b>, dura cerca de <b>2h</b>. Prefere 10h ou 15h30?</div>
+          <div class="wa-msg wa-in">15h30 então!</div>
+          <div class="wa-msg wa-out">Agendado ✨ Vou te mandar um lembrete um dia antes. Até sábado! 💅</div>
+        </div>
+      </div>
+    </div>
+    <div class="phone-glow"></div>
+  </div>
+</section>
+
+<!-- ============ COMO FUNCIONA ============ -->
+<section id="como-funciona" class="section">
+  <div class="section-head">
+    <span class="eyebrow">Como funciona</span>
+    <h2>Simples como esmaltar <em>uma unha por vez</em>.</h2>
+  </div>
+  <div class="steps">
+    <div class="step">
+      <span class="step-num">01</span>
+      <h3>Conte sobre o seu studio</h3>
+      <p>Serviços, preços, horários, formas de pagamento. Você preenche uma vez e pronto.</p>
+    </div>
+    <div class="step">
+      <span class="step-num">02</span>
+      <h3>Conecte seu WhatsApp</h3>
+      <p>Em poucos cliques a BotWap começa a responder do seu número, no seu tom.</p>
+    </div>
+    <div class="step">
+      <span class="step-num">03</span>
+      <h3>Deixa com ela</h3>
+      <p>Enquanto você atende uma cliente, a BotWap agenda a próxima. Você só aparece pra confirmar.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DEMO INTERATIVA ============ -->
+<section id="demo" class="section demo-section">
+  <div class="section-head">
+    <span class="eyebrow">Teste você mesma</span>
+    <h2>Converse com a BotWap <em>agora</em>.</h2>
+    <p class="section-sub">Mande uma mensagem como se fosse uma cliente sua. Ela responde na hora.</p>
+  </div>
+
+  <div class="demo-wrap">
+    <div class="phone phone-lg">
+      <div class="phone-notch"></div>
+      <div class="phone-screen">
+        <div class="wa-header">
+          <div class="wa-avatar">B</div>
+          <div>
+            <div class="wa-name">BotWap • Studio Marina</div>
+            <div class="wa-status" id="waStatus">online agora</div>
+          </div>
+        </div>
+        <div class="wa-body" id="waChat">
+          <div class="wa-msg wa-out">Oii, seja bem-vinda ao Studio Marina 💗 Como posso te ajudar hoje?</div>
+        </div>
+        <form class="wa-input" id="waForm" autocomplete="off">
+          <input type="text" id="waText" placeholder="Digite uma mensagem..." maxlength="200">
+          <button type="submit" aria-label="Enviar">➤</button>
+        </form>
+      </div>
+    </div>
+
+    <aside class="demo-side">
+      <h3>Experimente perguntar:</h3>
+      <div class="suggest">
+        <button data-msg="Vocês tem horário amanhã?">Vocês tem horário amanhã?</button>
+        <button data-msg="Quanto custa o alongamento em gel?">Quanto custa o alongamento em gel?</button>
+        <button data-msg="Quais formas de pagamento?">Quais formas de pagamento?</button>
+        <button data-msg="Vocês atendem em casa?">Vocês atendem em casa?</button>
+        <button data-msg="Quero remarcar meu horário">Quero remarcar meu horário</button>
+      </div>
+      <p class="demo-note">✨ Essa é uma demonstração. No seu studio, ela vai responder com <b>seus preços, seus horários e seu jeitinho</b>.</p>
+    </aside>
+  </div>
+</section>
+
+<!-- ============ BENEFÍCIOS ============ -->
+<section class="section benefits">
+  <div class="section-head">
+    <span class="eyebrow">Por que amar</span>
+    <h2>Menos mensagem no vermelho, <em>mais unhas prontas</em>.</h2>
+  </div>
+  <div class="benefits-grid">
+    <div class="benefit"><span>⏰</span><h3>Responde na hora</h3><p>Nunca mais deixe uma cliente esperando enquanto você tá com a mão na resina.</p></div>
+    <div class="benefit"><span>📅</span><h3>Agenda sem confusão</h3><p>Ela conhece sua agenda e nunca marca dois horários no mesmo lugar.</p></div>
+    <div class="benefit"><span>💗</span><h3>Fala do seu jeito</h3><p>Configuramos o tom pra combinar com o seu studio — carinhoso, direto ou elegante.</p></div>
+    <div class="benefit"><span>🌙</span><h3>Trabalha à noite</h3><p>Cliente mandou mensagem 23h? No dia seguinte ela já acorda com horário marcado.</p></div>
+    <div class="benefit"><span>💰</span><h3>Cobra sinal automático</h3><p>Se você pede sinal pra agendar, ela envia o Pix e confirma sozinha.</p></div>
+    <div class="benefit"><span>📊</span><h3>Você no controle</h3><p>Painel simples pra ver conversas, editar preços e ajustar quando quiser.</p></div>
+  </div>
+</section>
+
+<!-- ============ PLANOS ============ -->
+<section id="planos" class="section">
+  <div class="section-head">
+    <span class="eyebrow">Planos</span>
+    <h2>Escolha o que combina com o <em>seu ritmo</em>.</h2>
+  </div>
+  <div class="plans">
+    <div class="plan">
+      <h3>Essencial</h3>
+      <div class="price"><span>R$</span>49<small>/mês</small></div>
+      <ul>
+        <li>✿ Atendimento automático</li>
+        <li>✿ Até 200 conversas/mês</li>
+        <li>✿ Agenda integrada</li>
+        <li>✿ Suporte por WhatsApp</li>
+      </ul>
+      <a href="#cta" class="btn btn-ghost">Começar</a>
+    </div>
+    <div class="plan plan-featured">
+      <span class="plan-tag">Mais amado ✦</span>
+      <h3>Studio</h3>
+      <div class="price"><span>R$</span>89<small>/mês</small></div>
+      <ul>
+        <li>✿ Tudo do Essencial</li>
+        <li>✿ Conversas ilimitadas</li>
+        <li>✿ Cobrança de sinal por Pix</li>
+        <li>✿ Lembretes automáticos</li>
+        <li>✿ Personalização do tom</li>
+      </ul>
+      <a href="#cta" class="btn btn-primary">Quero esse</a>
+    </div>
+    <div class="plan">
+      <h3>Boutique</h3>
+      <div class="price"><span>R$</span>149<small>/mês</small></div>
+      <ul>
+        <li>✿ Tudo do Studio</li>
+        <li>✿ Até 3 profissionais</li>
+        <li>✿ Relatórios semanais</li>
+        <li>✿ Suporte prioritário</li>
+      </ul>
+      <a href="#cta" class="btn btn-ghost">Começar</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section id="faq" class="section">
+  <div class="section-head">
+    <span class="eyebrow">Dúvidas</span>
+    <h2>O que as nail designers <em>mais perguntam</em>.</h2>
+  </div>
+  <div class="faq">
+    <details><summary>Preciso de um número novo de WhatsApp?</summary><p>Não! A BotWap funciona no seu número atual. Você continua atendendo normalmente, ela só cuida do que dá pra automatizar.</p></details>
+    <details><summary>E se a cliente quiser falar comigo direto?</summary><p>É só ela pedir. A BotWap avisa você e sai da conversa na hora.</p></details>
+    <details><summary>Consigo mudar os preços depois?</summary><p>Sim, no painel. Você edita quando quiser e ela já responde com os valores novos.</p></details>
+    <details><summary>Tem fidelidade?</summary><p>Nenhuma. Cancele quando quiser, sem multa.</p></details>
+    <details><summary>Funciona pra outros salões?</summary><p>Funciona, mas a BotWap foi carinhosamente feita pra studios de unhas. É onde ela brilha mais ✨</p></details>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section id="cta" class="cta">
+  <div class="cta-inner">
+    <h2>Pronta pra ter uma <em>atendente perfeita</em>?</h2>
+    <p>Teste grátis por 7 dias. Sem cartão, sem enrolação.</p>
+    <form class="cta-form" id="ctaForm">
+      <input type="text" placeholder="Seu nome" required>
+      <input type="tel" placeholder="WhatsApp com DDD" required>
+      <button type="submit" class="btn btn-primary">Começar meu teste ✨</button>
+    </form>
+    <small id="ctaMsg"></small>
+  </div>
+</section>
+
+<footer class="footer">
+  <div>
+    <span class="brand-drop"></span>
+    <span>BotWap <em>Nails</em></span>
+  </div>
+  <p>Feito com 💗 pra quem cuida das mãos das outras.</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
