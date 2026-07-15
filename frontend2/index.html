@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="/frontend2/img/logo.png">
+<title>Salonnia</title>
+<meta name="description" content="Salonnia organiza agenda, clientes, profissionais e financeiro do seu salão em um só lugar — com a Iara, sua assistente de WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/frontend2/styles.css">
+<link rel="icon" type="image/png" sizes="32x32" href="/frontend2/assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/frontend2/assets/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/frontend2/assets/favicon-180.png">
+<link rel="shortcut icon" href="/frontend2/assets/favicon.ico">
+</head>
+<body>
+
+<div class="bg-texture" aria-hidden="true"></div>
+
+<!-- NAVBAR -->
+<header class="navbar" id="navbar">
+  <div class="container navbar-inner">
+    <a href="#" class="logo">
+      <img src="/frontend2/img/logo.png" alt="Salonnia" class="logo-mark">
+      <span class="logo-text">alonnia</span>
+    </a>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#funcionalidades">Funcionalidades</a>
+      <a href="#iara">Iara</a>
+      <a href="#planos">Planos</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+
+    <div class="navbar-actions">
+      <a href="#planos" class="btn btn-primary btn-sm">Assinar</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#funcionalidades">Funcionalidades</a>
+    <a href="#iara">Iara</a>
+    <a href="#planos">Planos</a>
+    <a href="#faq">FAQ</a>
+    <a href="#planos" class="btn btn-primary">Assinar</a>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-glow" aria-hidden="true"></div>
+    <div class="container hero-inner">
+      <div class="hero-content reveal">
+        <span class="eyebrow">Gestão para salões de beleza</span>
+        <h1>Sua gestão organizada, do primeiro agendamento ao último relatório</h1>
+        <p class="hero-subtitle">Agenda, clientes, profissionais e financeiro em um só lugar — simples de usar, bonito de olhar, feito para o dia a dia do seu salão.</p>
+        <div class="hero-actions">
+          <a href="#planos" class="btn btn-primary btn-lg">Nossos Planos</a>
+          <a href="#iara" class="btn btn-outline btn-lg">Conhecer a Iara</a>
+        </div>
+        <div class="hero-trust">
+          <div class="trust-avatars" aria-hidden="true">
+            <span></span><span></span><span></span>
+          </div>
+          <p>Já usado por salões em todo o Brasil</p>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal reveal-delay-1">
+        <!-- Dashboard mockup -->
+        <div class="dashboard-mock">
+          <div class="dashboard-mock-topbar">
+            <div class="dot dot-a"></div>
+            <div class="dot dot-b"></div>
+            <div class="dot dot-c"></div>
+          </div>
+          <div class="dashboard-mock-body">
+            <div class="mock-row mock-row-header">
+              <span>Agenda de hoje</span>
+              <span class="mock-tag">Quinta, 09:00</span>
+            </div>
+            <div class="mock-appointment">
+              <div class="mock-avatar"></div>
+              <div class="mock-lines">
+                <span class="line line-w60"></span>
+                <span class="line line-w40 line-muted"></span>
+              </div>
+              <span class="mock-time">09:30</span>
+            </div>
+            <div class="mock-appointment">
+              <div class="mock-avatar"></div>
+              <div class="mock-lines">
+                <span class="line line-w70"></span>
+                <span class="line line-w35 line-muted"></span>
+              </div>
+              <span class="mock-time">10:15</span>
+            </div>
+            <div class="mock-appointment mock-appointment-active">
+              <div class="mock-avatar"></div>
+              <div class="mock-lines">
+                <span class="line line-w55"></span>
+                <span class="line line-w30 line-muted"></span>
+              </div>
+              <span class="mock-time">11:00</span>
+            </div>
+            <div class="mock-chart">
+              <div class="mock-bar" style="--h:40%"></div>
+              <div class="mock-bar" style="--h:65%"></div>
+              <div class="mock-bar" style="--h:50%"></div>
+              <div class="mock-bar" style="--h:85%"></div>
+              <div class="mock-bar" style="--h:60%"></div>
+              <div class="mock-bar" style="--h:95%"></div>
+              <div class="mock-bar" style="--h:70%"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Phone mockup (placeholder for real product screenshot) -->
+        <div class="phone-mock phone-mock-hero">
+          <div class="phone-notch"></div>
+          <div class="phone-screen" data-placeholder="screenshot-app">
+            <div class="phone-screen-placeholder">
+              <span class="placeholder-icon">＋</span>
+              <span>Print da plataforma aqui</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFÍCIOS -->
+  <section class="benefits">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Por que Salonnia</span>
+        <h2>Tudo que seu salão precisa, sem complicação</h2>
+      </div>
+
+      <div class="benefits-grid">
+        <div class="benefit-card reveal">
+          <div class="benefit-icon">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M4 7h16M4 12h16M4 17h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Organização real</h3>
+          <p>Toda a rotina do salão centralizada, sem planilhas soltas ou agenda de papel.</p>
+        </div>
+        <div class="benefit-card reveal reveal-delay-1">
+          <div class="benefit-icon">
+            <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Economia de tempo</h3>
+          <p>Menos tempo remarcando horário no telefone, mais tempo atendendo clientes.</p>
+        </div>
+        <div class="benefit-card reveal reveal-delay-2">
+          <div class="benefit-icon">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 2l2.4 6.6L21 11l-6.6 2.4L12 20l-2.4-6.6L3 11l6.6-2.4L12 2z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Menos faltas</h3>
+          <p>Lembretes automáticos reduzem cancelamentos e horários vagos na agenda.</p>
+        </div>
+        <div class="benefit-card reveal reveal-delay-3">
+          <div class="benefit-icon">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M3 17l5-5 4 4 8-8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 8h6v6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Visão financeira</h3>
+          <p>Relatórios claros para você entender o que está funcionando no seu negócio.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMO FUNCIONA -->
+  <section class="how-it-works">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Como funciona</span>
+        <h2>Três passos para organizar seu salão</h2>
+      </div>
+
+      <div class="steps">
+        <div class="step reveal">
+          <div class="step-number">01</div>
+          <h3>Cadastre seu salão</h3>
+          <p>Crie sua conta e configure as informações básicas em poucos minutos.</p>
+        </div>
+        <div class="step-connector" aria-hidden="true"></div>
+        <div class="step reveal reveal-delay-1">
+          <div class="step-number">02</div>
+          <h3>Configure agenda e serviços</h3>
+          <p>Defina horários, profissionais, serviços e preços do jeito que funciona pra você.</p>
+        </div>
+        <div class="step-connector" aria-hidden="true"></div>
+        <div class="step reveal reveal-delay-2">
+          <div class="step-number">03</div>
+          <h3>Comece a atender</h3>
+          <p>Sua agenda pública já fica no ar, pronta para receber os primeiros agendamentos.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FUNCIONALIDADES -->
+  <section class="features" id="funcionalidades">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Funcionalidades</span>
+        <h2>Um sistema completo, pensado para o salão</h2>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card reveal">
+          <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="16" rx="2" stroke="currentColor" stroke-width="2"/><path d="M3 10h18M8 3v4M16 3v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+          <h3>Agenda</h3>
+          <p>Visualize e organize todos os horários do dia, da semana e do mês em um calendário inteligente.</p>
+        </div>
+        <div class="feature-card reveal reveal-delay-1">
+          <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="2"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+          <h3>Clientes</h3>
+          <p>Histórico completo de cada cliente: serviços, preferências e frequência de visitas.</p>
+        </div>
+        <div class="feature-card reveal reveal-delay-2">
+          <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M17 21v-2a4 4 0 00-4-4H7a4 4 0 00-4 4v2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="10" cy="7" r="4" stroke="currentColor" stroke-width="2"/><path d="M22 21v-2a4 4 0 00-3-3.87" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M16 3.13a4 4 0 010 7.75" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+          <h3>Profissionais</h3>
+          <p>Gerencie a equipe, comissões e a agenda individual de cada profissional do salão.</p>
+        </div>
+        <div class="feature-card reveal reveal-delay-3">
+          <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2l7 4v6c0 5-3.5 8-7 10-3.5-2-7-5-7-10V6l7-4z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></div>
+          <h3>Serviços</h3>
+          <p>Cadastre serviços, durações e preços — tudo refletido automaticamente na agenda.</p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M4 19V9M11 19V4M18 19v-7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+          <h3>Relatórios</h3>
+          <p>Acompanhe faturamento, serviços mais procurados e desempenho por profissional.</p>
+        </div>
+        <div class="feature-card reveal reveal-delay-1">
+          <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="14" rx="2" stroke="currentColor" stroke-width="2"/><path d="M3 9h18" stroke="currentColor" stroke-width="2"/><circle cx="8" cy="13.5" r="1.2" fill="currentColor"/></svg></div>
+          <h3>Página de agendamento</h3>
+          <p>Link público para clientes agendarem sozinhos, sem precisar ligar ou mandar mensagem.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DASHBOARD DESTAQUE -->
+  <section class="dashboard-showcase">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">O sistema</span>
+        <h2>Tudo visível em um painel só</h2>
+        <p class="section-lead">Sem telas confusas, sem menus escondidos. Só o que importa, no lugar certo.</p>
+      </div>
+
+      <div class="showcase-frame reveal">
+        <div class="showcase-sidebar">
+          <div class="showcase-logo">Salonnia</div>
+          <div class="showcase-nav-item active">
+            <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="16" rx="2" stroke="currentColor" stroke-width="2"/></svg>
+            Agenda
+          </div>
+          <div class="showcase-nav-item">
+            <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="2"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6" stroke="currentColor" stroke-width="2"/></svg>
+            Clientes
+          </div>
+          <div class="showcase-nav-item">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M4 19V9M11 19V4M18 19v-7" stroke="currentColor" stroke-width="2"/></svg>
+            Relatórios
+          </div>
+          <div class="showcase-nav-item">
+            <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2"/><path d="M19 12a7 7 0 00-.2-1.6l2-1.6-2-3.4-2.4.8a7 7 0 00-2.8-1.6L13 2h-4l-.6 2.6a7 7 0 00-2.8 1.6l-2.4-.8-2 3.4 2 1.6A7 7 0 003 12" stroke="currentColor" stroke-width="1.5"/></svg>
+            Configurações
+          </div>
+        </div>
+
+        <div class="showcase-content">
+          <div class="showcase-metrics">
+            <div class="metric-card">
+              <span class="metric-label">Agendamentos hoje</span>
+              <span class="metric-value">18</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-label">Faturamento do mês</span>
+              <span class="metric-value">R$ 12.480</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-label">Taxa de retorno</span>
+              <span class="metric-value">68%</span>
+            </div>
+          </div>
+
+          <div class="showcase-table">
+            <div class="table-row table-head">
+              <span>Cliente</span><span>Serviço</span><span>Profissional</span><span>Horário</span>
+            </div>
+            <div class="table-row">
+              <span>Camila Souza</span><span>Alongamento</span><span>Bianca</span><span>09:30</span>
+            </div>
+            <div class="table-row">
+              <span>Larissa Nunes</span><span>Esmaltação</span><span>Iasmin</span><span>10:15</span>
+            </div>
+            <div class="table-row">
+              <span>Débora Lima</span><span>Spa dos pés</span><span>Bianca</span><span>11:00</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- IARA -->
+  <section class="iara" id="iara">
+    <div class="iara-glow" aria-hidden="true"></div>
+    <div class="container iara-inner">
+      <div class="iara-content reveal">
+        <span class="eyebrow eyebrow-iara">Assistente virtual</span>
+        <h2>Conheça a Iara</h2>
+        <p class="iara-lead">A assistente que atende seus clientes no WhatsApp enquanto você cuida do salão.</p>
+        <ul class="iara-list">
+          <li>
+            <span class="iara-check">✓</span>
+            Responde dúvidas dos clientes automaticamente
+          </li>
+          <li>
+            <span class="iara-check">✓</span>
+            Confirma horários marcados
+          </li>
+          <li>
+            <span class="iara-check">✓</span>
+            Envia lembretes antes do atendimento
+          </li>
+          <li>
+            <span class="iara-check">✓</span>
+            Em breve: agenda automaticamente pelo WhatsApp
+          </li>
+        </ul>
+        <a href="#planos" class="btn btn-iara btn-lg">Quero a Iara no meu salão</a>
+      </div>
+
+      <div class="iara-visual reveal reveal-delay-1">
+        <div class="phone-mock phone-mock-iara">
+          <div class="phone-notch"></div>
+          <div class="phone-screen phone-screen-chat">
+            <div class="chat-header">
+              <div class="chat-avatar">IA</div>
+              <div>
+                <span class="chat-name">Iara</span>
+                <span class="chat-status">online</span>
+              </div>
+            </div>
+            <div class="chat-body">
+              <div class="bubble bubble-in">Oi! Gostaria de marcar um horário para amanhã 😊</div>
+              <div class="bubble bubble-out">Claro! Temos horário às 14h ou 16h30, qual prefere?</div>
+              <div class="bubble bubble-in">14h está ótimo!</div>
+              <div class="bubble bubble-out">Perfeito, confirmado para amanhã às 14h. Te aviso 1h antes ✓</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PLANOS -->
+  <section class="pricing" id="planos">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Planos</span>
+        <h2>Escolha o plano do seu salão</h2>
+      </div>
+
+      <div class="pricing-grid">
+        <div class="price-card reveal">
+          <h3>Salonnia</h3>
+          <p class="price-desc">Gestão completa do salão</p>
+          <div class="price-value"><span class="price-currency">R$</span>39,90<span class="price-period">/mês</span></div>
+          <ul class="price-features">
+            <li>Agenda ilimitada</li>
+            <li>Cadastro de clientes</li>
+            <li>Profissionais e serviços</li>
+            <li>Relatórios básicos</li>
+            <li>Página de agendamento público</li>
+          </ul>
+          <a href="#" class="btn btn-outline btn-full">Começar agora</a>
+        </div>
+
+        <div class="price-card price-card-featured reveal reveal-delay-1">
+          <span class="price-badge">Mais completo</span>
+          <h3>Salonnia + Iara</h3>
+          <p class="price-desc">Gestão completa + assistente no WhatsApp</p>
+          <div class="price-value"><span class="price-currency">R$</span>79,90<span class="price-period">/mês</span></div>
+          <ul class="price-features">
+            <li>Tudo do plano Salonnia</li>
+            <li>Iara respondendo no WhatsApp</li>
+            <li>Confirmação e lembretes automáticos</li>
+            <li>Relatórios avançados</li>
+            <li>Suporte prioritário</li>
+          </ul>
+          <a href="#" class="btn btn-primary btn-full">Começar agora</a>
+        </div>
+      </div>
+      <p class="pricing-note">Todos os planos incluem teste gratuito. Cancele quando quiser.</p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq" id="faq">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Dúvidas</span>
+        <h2>Perguntas frequentes</h2>
+      </div>
+
+      <div class="faq-list">
+        <div class="faq-item reveal">
+          <button class="faq-question">
+            Preciso instalar algum programa?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Não. O Salonnia funciona direto no navegador, no computador ou no celular, sem instalação.</p>
+          </div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-question">
+            Tem período de teste gratuito?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Sim, você pode testar o Salonnia gratuitamente antes de decidir qual plano faz mais sentido para o seu salão.</p>
+          </div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-question">
+            Como funciona a Iara no WhatsApp?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>A Iara se conecta ao WhatsApp do seu salão e responde clientes automaticamente, confirma horários e envia lembretes, sem que você precise fazer nada.</p>
+          </div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-question">
+            Posso cancelar quando quiser?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Sim, não há fidelidade. Você pode cancelar sua assinatura a qualquer momento direto no painel.</p>
+          </div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-question">
+            O sistema funciona bem no celular?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Sim, o Salonnia foi desenhado para funcionar perfeitamente em qualquer tela, do celular ao computador.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="final-cta">
+    <div class="container final-cta-inner reveal">
+      <h2>Pronto para organizar seu salão?</h2>
+      <p>Comece gratuitamente hoje e veja a diferença na primeira semana.</p>
+      <a href="#planos" class="btn btn-primary btn-lg">Começar gratuitamente</a>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <a href="#" class="logo">
+        <img src="/frontend2/img/logo.png" alt="Salonnia" class="logo-mark">
+        <span class="logo-text">alonnia</span>
+      </a>
+      <p>Gestão inteligente para salões de beleza.</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Produto</h4>
+      <a href="#funcionalidades">Funcionalidades</a>
+      <a href="#iara">Iara</a>
+      <a href="#planos">Planos</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Empresa</h4>
+      <a href="#">Sobre</a>
+      <a href="#">Contato</a>
+      <a href="#faq">FAQ</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Redes sociais</h4>
+      <div class="footer-social">
+        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+        <a href="#" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3a9 9 0 00-7.8 13.5L3 21l4.7-1.2A9 9 0 1012 3z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M8.5 9c0 4 2.5 6.5 6.5 6.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></a>
+        <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" stroke-width="2"/><path d="M7 10v7M7 7v.01M12 17v-4.5a2 2 0 014 0V17M12 17v-7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container footer-bottom">
+    <p>© 2026 Salonnia. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+<script src="/frontend2/script.js"></script>
+</body>
+</html>
