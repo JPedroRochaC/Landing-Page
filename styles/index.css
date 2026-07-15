@@ -1,0 +1,20 @@
+/* ===========================
+   MAIN STYLESHEET - IMPORTS
+=========================== */
+/* Import all CSS modules in order */
+
+@import url('./00-variables.css');
+@import url('./01-typography.css');
+@import url('./02-buttons.css');
+@import url('./03-navbar.css');
+@import url('./04-hero.css');
+@import url('./05-benefits.css');
+@import url('./06-how-it-works.css');
+@import url('./07-features.css');
+@import url('./08-dashboard-showcase.css');
+@import url('./09-iara.css');
+@import url('./10-pricing.css');
+@import url('./11-faq.css');
+@import url('./12-cta-footer.css');
+@import url('./13-animations.css');
+@import url('./14-responsive.css');
