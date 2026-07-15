@@ -1,0 +1,68 @@
+/* ===========================
+   FOOTER
+=========================== */
+.footer {
+    background: var(--brown-deep);
+    border-top: 1px solid var(--border-dark-soft);
+    padding: 64px 0 24px;
+}
+
+.footer .logo-text,
+.footer-brand p { color: var(--beige); }
+
+.footer-inner {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr 1fr;
+    gap: 40px;
+    padding-bottom: 40px;
+}
+
+.footer-brand p {
+    color: var(--beige-muted);
+    font-size: 0.85rem;
+    margin-top: 12px;
+    max-width: 220px;
+}
+
+.footer-col h4 {
+    font-size: 0.85rem;
+    color: var(--beige-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-bottom: 16px;
+}
+.footer-col a {
+    display: block;
+    color: var(--beige-muted);
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+    transition: color 0.2s ease;
+}
+.footer-col a:hover { color: var(--pink); }
+
+.footer-social {
+    display: flex;
+    gap: 10px;
+}
+.footer-social a {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid var(--border-dark-soft);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--beige-muted);
+    transition: border-color 0.2s ease, color 0.2s ease;
+}
+.footer-social a svg { width: 16px; height: 16px; }
+.footer-social a:hover { border-color: var(--pink); color: var(--pink); }
+
+.footer-bottom {
+    border-top: 1px solid var(--border-dark-soft);
+    padding-top: 20px;
+}
+.footer-bottom p {
+    color: var(--beige-muted);
+    font-size: 0.8rem;
+}

@@ -1,0 +1,100 @@
+/* ===========================
+   DASHBOARD SHOWCASE
+=========================== */
+.showcase-frame {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    background: var(--brown-light);
+    border: 1px solid var(--border-dark-soft);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-dark-lg);
+    overflow: hidden;
+    min-height: 420px;
+}
+
+.showcase-sidebar {
+    background: var(--brown-deep);
+    border-right: 1px solid var(--border-dark-soft);
+    padding: 24px 16px;
+}
+
+.showcase-logo {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    color: var(--red);
+    margin-bottom: 28px;
+    padding-left: 8px;
+}
+
+.showcase-nav-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 11px 12px;
+    border-radius: var(--radius-sm);
+    font-size: 0.88rem;
+    color: var(--beige-muted);
+    margin-bottom: 4px;
+}
+.showcase-nav-item svg { width: 17px; height: 17px; flex-shrink: 0; }
+.showcase-nav-item.active {
+    background: rgba(209, 5, 5, 0.15);
+    color: var(--pink);
+    box-shadow: inset 0 0 0 1px var(--border-red);
+}
+
+.showcase-content {
+    padding: 28px;
+}
+
+.showcase-metrics {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    margin-bottom: 24px;
+}
+
+.metric-card {
+    background: var(--brown-deep);
+    border: 1px solid var(--border-dark-soft);
+    border-radius: var(--radius-sm);
+    padding: 16px;
+    box-shadow: var(--shadow-sm);
+}
+.metric-label {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--beige-muted);
+    margin-bottom: 8px;
+}
+.metric-value {
+    display: block;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: var(--pink);
+}
+
+.showcase-table {
+    border: 1px solid var(--border-dark-soft);
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+}
+
+.table-row {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr 1fr 0.7fr;
+    padding: 13px 16px;
+    font-size: 0.85rem;
+    border-bottom: 1px solid var(--border-dark-soft);
+    color: var(--beige-muted);
+}
+.table-row:last-child { border-bottom: none; }
+.table-head {
+    background: var(--brown-deep);
+    font-weight: 600;
+    color: var(--beige-muted);
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}

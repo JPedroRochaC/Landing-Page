@@ -1,0 +1,105 @@
+/* ===========================
+   NAVBAR
+=========================== */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    padding: 16px 0;
+    transition: background 0.3s ease, box-shadow 0.3s ease, padding 0.3s ease, border-color 0.3s ease;
+    border-bottom: 1px solid transparent;
+}
+
+.navbar.scrolled {
+    background: rgba(255, 246, 242, 0.88);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: var(--shadow-md);
+    border-bottom: 1px solid var(--border-soft);
+    padding: 10px 0;
+}
+
+.navbar-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-mark {
+    height: 52px;
+    width: auto;
+    display: block;
+}
+
+.logo-text {
+    font-family: 'Georgia', serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    color: var(--brown);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.nav-links a {
+    font-size: 0.92rem;
+    font-weight: 500;
+    color: var(--brown-soft);
+    transition: color 0.2s ease;
+    position: relative;
+}
+.nav-links a:hover { color: var(--red); }
+
+.navbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    width: 26px;
+    padding: 4px;
+}
+.menu-toggle span {
+    height: 2px;
+    background: var(--brown);
+    border-radius: 2px;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+}
+.menu-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.menu-toggle.open span:nth-child(2) { opacity: 0; }
+.menu-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    background: var(--cream);
+    border-top: 1px solid var(--border-soft);
+    box-shadow: var(--shadow-lg);
+    padding: 16px 24px 24px;
+}
+.mobile-menu.open { display: flex; }
+.mobile-menu a {
+    padding: 12px 4px;
+    border-bottom: 1px solid var(--border-soft);
+    color: var(--brown-soft);
+    font-weight: 500;
+}
+.mobile-menu .btn { margin-top: 12px; }
