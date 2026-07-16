@@ -1,81 +1,222 @@
 /* ===========================
    PRICING
 =========================== */
+
 .pricing-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 24px;
-    max-width: 780px;
-    margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  max-width: 850px;
+  margin: 0 auto;
+  align-items: center;
 }
 
 .price-card {
-    background: var(--cream);
-    border: 1px solid var(--border-soft);
-    border-radius: var(--radius-lg);
-    padding: 36px 30px;
-    box-shadow: var(--shadow-md);
-    position: relative;
+  background: var(--cream);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-lg);
+  padding: 36px 30px;
+  box-shadow: var(--shadow-md);
+  position: relative;
+  transition: 0.3s ease;
 }
 
+.price-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Plano Salonia + Iara */
 .price-card-featured {
-    border: 2px solid var(--red);
-    box-shadow: var(--shadow-lg), var(--shadow-red-glow);
-    transform: scale(1.03);
+  border: 2px solid var(--red);
+
+  box-shadow: var(--shadow-lg), var(--shadow-red-glow);
+
+  transform: scale(1.08);
+
+  z-index: 2;
 }
 
+.price-card-featured:hover {
+  transform: scale(1.08) translateY(-5px);
+}
+
+/* Badge */
 .price-badge {
-    position: absolute;
-    top: -13px;
-    right: 24px;
-    background: var(--red);
-    color: #fff;
-    font-size: 0.7rem;
-    font-weight: 700;
-    padding: 5px 14px;
-    border-radius: var(--radius-pill);
-    box-shadow: var(--shadow-sm);
+  position: absolute;
+
+  top: -15px;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  background: var(--red);
+
+  color: #fff;
+
+  font-size: 0.75rem;
+
+  font-weight: 700;
+
+  padding: 7px 18px;
+
+  border-radius: var(--radius-pill);
+
+  box-shadow: var(--shadow-sm);
+
+  white-space: nowrap;
 }
 
+/* Descrição */
 .price-desc {
-    color: var(--brown-soft);
-    font-size: 0.88rem;
-    margin: 6px 0 20px;
+  color: var(--brown-soft);
+
+  font-size: 0.88rem;
+
+  line-height: 1.5;
+
+  margin: 8px 0 22px;
 }
+
+/* Preço */
 
 .price-value {
-    font-family: var(--font-heading);
-    font-weight: 800;
-    font-size: 2.6rem;
-    margin-bottom: 24px;
-    color: var(--brown);
+  font-family: var(--font-heading);
+
+  font-weight: 800;
+
+  font-size: 2.6rem;
+
+  margin-bottom: 24px;
+
+  color: var(--brown);
 }
-.price-currency { font-size: 1.2rem; vertical-align: top; margin-right: 2px; }
-.price-period { font-size: 0.9rem; font-weight: 500; color: var(--brown-soft); }
+
+.price-card-featured .price-value {
+  font-size: 3rem;
+}
+
+.price-currency {
+  font-size: 1.2rem;
+
+  vertical-align: top;
+
+  margin-right: 2px;
+}
+
+.price-period {
+  font-size: 0.9rem;
+
+  font-weight: 500;
+
+  color: var(--brown-soft);
+}
+
+/* Texto especial do plano premium */
+.price-highlight {
+  background: rgba(255, 0, 0, 0.06);
+
+  color: var(--red);
+
+  border-radius: 12px;
+
+  padding: 12px;
+
+  text-align: center;
+
+  font-size: 0.85rem;
+
+  font-weight: 600;
+
+  margin-bottom: 22px;
+}
+
+/* Lista */
 
 .price-features {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    margin-bottom: 28px;
-}
-.price-features li {
-    font-size: 0.88rem;
-    color: var(--brown-soft);
-    padding-left: 24px;
-    position: relative;
-}
-.price-features li::before {
-    content: '✓';
-    position: absolute;
-    left: 0;
-    color: var(--red);
-    font-weight: 700;
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 12px;
+
+  margin-bottom: 28px;
 }
 
+.price-features li {
+  font-size: 0.88rem;
+
+  color: var(--brown-soft);
+
+  padding-left: 24px;
+
+  position: relative;
+
+  line-height: 1.4;
+}
+
+.price-features li::before {
+  content: "✓";
+
+  position: absolute;
+
+  left: 0;
+
+  color: var(--red);
+
+  font-weight: 700;
+}
+
+/* Funções que não existem no plano básico */
+
+.price-features .disabled {
+  color: #d95353;
+
+  text-decoration: line-through;
+
+  opacity: 0.75;
+}
+
+.price-features .disabled::before {
+  content: "✕";
+
+  color: #d95353;
+}
+
+/* Plano premium título maior */
+
+.price-card-featured h3 {
+  font-size: 1.8rem;
+}
+
+/* Nota */
+
 .pricing-note {
-    text-align: center;
-    color: var(--brown-soft);
-    font-size: 0.85rem;
-    margin-top: 28px;
+  text-align: center;
+
+  color: var(--brown-soft);
+
+  font-size: 0.85rem;
+
+  margin-top: 35px;
+}
+
+/* Responsivo */
+
+@media (max-width: 768px) {
+  .pricing-grid {
+    grid-template-columns: 1fr;
+
+    max-width: 420px;
+  }
+
+  .price-card-featured {
+    transform: scale(1);
+
+    order: -1;
+  }
+
+  .price-card-featured:hover {
+    transform: translateY(-5px);
+  }
 }
