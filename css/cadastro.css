@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Inter:wght@400;500;600&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #ffaaaa;
+  color: #28180c;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+#signupForm {
+  background: #fff6f2;
+  border-radius: 24px;
+  box-shadow: 0 20px 50px rgba(40, 24, 12, 0.18);
+  padding: 40px 32px;
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+#signupForm h1 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 800;
+  font-size: 1.5rem;
+  color: #28180c;
+  margin-bottom: 6px;
+}
+
+#signupForm .form-subtitle {
+  font-size: 0.88rem;
+  color: #6b4a35;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+#signupForm input {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1px solid rgba(40, 24, 12, 0.18);
+  background: #fff;
+  color: #28180c;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+#signupForm input::placeholder {
+  color: #6b4a35;
+  opacity: 0.7;
+}
+
+#signupForm input:focus {
+  border-color: #d10505;
+  box-shadow: 0 0 0 3px rgba(209, 5, 5, 0.12);
+}
+
+#signupForm button {
+  margin-top: 10px;
+  width: 100%;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 999px;
+  background: #d10505;
+  color: #fff;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
+  font-size: 0.98rem;
+  cursor: pointer;
+  box-shadow: 0 10px 26px rgba(209, 5, 5, 0.28);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+
+#signupForm button:hover {
+  background: #ef0c0c;
+  transform: translateY(-2px);
+}
+
+#signupForm button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+@media (max-width: 480px) {
+  #signupForm {
+    padding: 32px 24px;
+    border-radius: 20px;
+  }
+}
