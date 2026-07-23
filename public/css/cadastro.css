@@ -8,8 +8,8 @@
 
 body {
   font-family: 'Inter', sans-serif;
-  background: #ffaaaa;
-  color: #28180c;
+  background: #edc2cb;
+  color: #2e2a2c;
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -18,9 +18,9 @@ body {
 }
 
 #signupForm {
-  background: #fff6f2;
+  background: #fffaf9;
   border-radius: 24px;
-  box-shadow: 0 20px 50px rgba(40, 24, 12, 0.18);
+  box-shadow: 0 20px 50px rgba(46, 42, 44, 0.18);
   padding: 40px 32px;
   width: 100%;
   max-width: 400px;
@@ -33,13 +33,13 @@ body {
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-weight: 800;
   font-size: 1.5rem;
-  color: #28180c;
+  color: #2e2a2c;
   margin-bottom: 6px;
 }
 
 #signupForm .form-subtitle {
   font-size: 0.88rem;
-  color: #6b4a35;
+  color: #737175;
   line-height: 1.5;
   margin-bottom: 10px;
 }
@@ -48,9 +48,9 @@ body {
   width: 100%;
   padding: 14px 16px;
   border-radius: 12px;
-  border: 1px solid rgba(40, 24, 12, 0.18);
+  border: 1px solid rgba(46, 42, 44, 0.18);
   background: #fff;
-  color: #28180c;
+  color: #2e2a2c;
   font-family: 'Inter', sans-serif;
   font-size: 0.95rem;
   outline: none;
@@ -58,13 +58,13 @@ body {
 }
 
 #signupForm input::placeholder {
-  color: #6b4a35;
+  color: #737175;
   opacity: 0.7;
 }
 
 #signupForm input:focus {
-  border-color: #d10505;
-  box-shadow: 0 0 0 3px rgba(209, 5, 5, 0.12);
+  border-color: #641546;
+  box-shadow: 0 0 0 3px rgba(100, 21, 70, 0.12);
 }
 
 #signupForm button {
@@ -73,18 +73,18 @@ body {
   padding: 15px 20px;
   border: none;
   border-radius: 999px;
-  background: #d10505;
+  background: #641546;
   color: #fff;
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-weight: 700;
   font-size: 0.98rem;
   cursor: pointer;
-  box-shadow: 0 10px 26px rgba(209, 5, 5, 0.28);
+  box-shadow: 0 10px 26px rgba(100, 21, 70, 0.28);
   transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
 }
 
 #signupForm button:hover {
-  background: #ef0c0c;
+  background: #7d1c58;
   transform: translateY(-2px);
 }
 

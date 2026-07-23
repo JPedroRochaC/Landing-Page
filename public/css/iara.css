@@ -16,7 +16,7 @@
     transform: translateX(-50%);
     width: 700px;
     height: 700px;
-    background: radial-gradient(circle, rgba(255, 170, 170, 0.16), transparent 65%);
+    background: radial-gradient(circle, rgba(237, 194, 203, 0.16), transparent 65%);
     z-index: 0;
     pointer-events: none;
 }
@@ -80,7 +80,7 @@
 .phone-mock-iara {
     width: 260px;
     border-color: var(--brown-lighter);
-    box-shadow: var(--shadow-dark-lg), 0 0 44px rgba(255, 170, 170, 0.18);
+    box-shadow: var(--shadow-dark-lg), 0 0 44px rgba(237, 194, 203, 0.18);
 }
 
 .phone-screen-chat {
