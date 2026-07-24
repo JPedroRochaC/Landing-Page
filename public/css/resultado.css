@@ -51,3 +51,8 @@ body {
   font-size: 0.92rem;
   line-height: 1.6;
 }
+.resultado-etapa { display: inline-block; margin-bottom: 10px; color: #641546; font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; }
+.resultado-aviso { margin-top: 18px; padding: 14px; border-radius: 14px; background: rgba(100, 21, 70, .07); color: #5f585b; font-size: .82rem; line-height: 1.55; }
+.resultado-aviso strong { color: #641546; }
+.resultado-link { display: inline-block; margin-top: 22px; color: #641546; font-size: .85rem; font-weight: 600; }
+.resultado-button { display: block; margin-top: 22px; padding: 13px 18px; border-radius: 999px; background: #641546; color: #fff; font-weight: 700; text-decoration: none; }

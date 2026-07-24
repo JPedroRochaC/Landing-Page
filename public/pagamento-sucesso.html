@@ -1,17 +1,15 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="/img/logo.png" />
-    <link rel="stylesheet" href="/css/resultado.css">
-    <title>Pagamento aprovado</title>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/img/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/css/resultado.css?v=2">
+  <title>Confirmando assinatura | Salonia</title>
 </head>
-<body>
-    <div class="resultado-card">
-        <div class="resultado-icone sucesso">✓</div>
-        <h1>Pagamento recebido!</h1>
-        <p>Sua solicitação foi confirmada. Em breve você vai receber seu acesso por e-mail ou WhatsApp — geralmente em até algumas horas.</p>
-    </div>
-</body>
+<body><main class="resultado-card" aria-live="polite">
+  <div class="resultado-icone pendente" id="statusIcon">…</div><span class="resultado-etapa">Etapa 2 de 2</span>
+  <h1 id="statusTitle">Confirmando seu pagamento</h1>
+  <p id="statusMessage">Estamos consultando sua assinatura diretamente no Mercado Pago.</p>
+  <div class="resultado-aviso" id="statusNotice"><strong>Aguarde só um instante</strong><br>Não feche esta página enquanto fazemos a confirmação.</div>
+  <a class="resultado-link" href="/">Voltar para a página inicial</a>
+</main><script src="/js/resultado.js?v=2"></script></body>
 </html>

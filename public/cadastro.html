@@ -1,35 +1,24 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="/img/logo.png" />
-    <link rel="stylesheet" href="/css/variables.css">
-    <link rel="stylesheet" href="/css/typography.css">
-    <link rel="stylesheet" href="/css/button.css">
-    <link rel="stylesheet" href="/css/cadastro.css">
-    <title>Solicitar plano</title>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="/img/logo.png"><link rel="stylesheet" href="/css/variables.css"><link rel="stylesheet" href="/css/typography.css"><link rel="stylesheet" href="/css/button.css"><link rel="stylesheet" href="/css/cadastro.css?v=2">
+  <title>Finalizar assinatura | Salonia</title>
 </head>
 <body>
+  <main class="checkout-shell">
+    <a class="checkout-brand" href="/" aria-label="Voltar para a página inicial"><span class="checkout-logo-frame"><img src="/img/logo.png?v=2" alt=""></span><span>Salonia</span></a>
     <form id="signupForm">
-
-    <h1>Solicitar plano</h1>
-    <p class="form-subtitle">Coloque aqui os dados do seu salão pra já começarmos a personalização assim que o pagamento for confirmado.</p>
-
-    <input id="salao" type="text" placeholder="Nome do salão" required>
-
-    <input id="nome" type="text" placeholder="Seu nome" required>
-
-    <input id="email" type="email" placeholder="Email" required>
-
-    <input id="whatsapp" type="tel" placeholder="WhatsApp" required>
-
-    <button type="submit" id="submitBtn">
-        Continuar para pagamento
-    </button>
-
-</form>
-
-<script src="/js/cadastro.js"></script>
+      <div class="step-label">Etapa 1 de 2</div><h1>Vamos finalizar sua assinatura</h1>
+      <p class="form-subtitle">Precisamos apenas dos seus dados de contato antes de abrir o pagamento seguro do Mercado Pago.</p>
+      <label for="nome">Seu nome</label><input id="nome" type="text" autocomplete="name" placeholder="Como podemos chamar você?" required>
+      <label for="whatsapp">WhatsApp</label><input id="whatsapp" type="tel" inputmode="tel" autocomplete="tel" placeholder="(85) 99999-9999" maxlength="16" required>
+      <label for="email">E-mail</label><input id="email" type="email" autocomplete="email" placeholder="voce@exemplo.com" required>
+      <small class="field-hint">O Mercado Pago usa este e-mail para identificar a assinatura e enviar o comprovante.</small>
+      <div class="after-payment-note"><strong>Depois do pagamento</strong><p>Enviaremos no seu WhatsApp o formulário completo para configurar e criar o seu Salonia.</p></div>
+      <label class="consent-field"><input type="checkbox" required><span>Li e concordo com os <a href="/termos.html" target="_blank">Termos de Uso</a> e a <a href="/privacidade.html" target="_blank">Política de Privacidade</a>.</span></label>
+      <button type="submit" id="submitBtn">Ir para o pagamento seguro</button><p class="secure-note">🔒 Pagamento processado com segurança pelo Mercado Pago.</p>
+    </form>
+  </main><script src="/js/cadastro.js?v=2"></script>
 </body>
 </html>

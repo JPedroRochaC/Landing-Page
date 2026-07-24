@@ -3,11 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" href="/img/logo.png" />
-    <title>Salonia</title>
+    <link rel="icon" href="/img/favicon.svg" type="image/svg+xml" />
+    <meta name="theme-color" content="#641546" />
+    <title>Salonia | Gestão para salões de beleza</title>
     <meta
       name="description"
-      content="Salonnia organiza agenda, clientes, profissionais e financeiro do seu salão em um só lugar — com a Iara, sua assistente de WhatsApp."
+      content="Salonia organiza agenda, clientes, profissionais e financeiro do seu salão em um só lugar, de forma simples e acessível."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -22,14 +23,14 @@
     <link rel="stylesheet" href="/css/variables.css" />
     <link rel="stylesheet" href="/css/typography.css" />
     <link rel="stylesheet" href="/css/button.css" />
-    <link rel="stylesheet" href="/css/navbar.css" />
+    <link rel="stylesheet" href="/css/navbar.css?v=2" />
     <link rel="stylesheet" href="/css/hero.css" />
     <link rel="stylesheet" href="/css/benefits.css" />
     <link rel="stylesheet" href="/css/how-it-works.css" />
     <link rel="stylesheet" href="/css/features.css" />
     <link rel="stylesheet" href="/css/dashboard.css" />
     <link rel="stylesheet" href="/css/iara.css" />
-    <link rel="stylesheet" href="/css/pricing.css" />
+    <link rel="stylesheet" href="/css/pricing.css?v=3" />
     <link rel="stylesheet" href="/css/faq.css" />
     <link rel="stylesheet" href="/css/cta.css" />
     <link rel="stylesheet" href="/css/animation.css" />
@@ -47,6 +48,8 @@
         href="https://wa.me/5585996269742"
         class="whatsapp-float"
         target="_blank"
+        rel="noopener"
+        aria-label="Falar com a Salonia pelo WhatsApp"
       >
         <i class="fa-brands fa-whatsapp"></i>
       </a>
@@ -56,8 +59,8 @@
     <header class="navbar" id="navbar">
       <div class="container navbar-inner">
         <a href="#" class="logo">
-          <img src="/img/logo.png" alt="Salonia" class="logo-mark" />
-          <span class="logo-text">alonia</span>
+          <img src="/img/logo.png?v=2" alt="" class="logo-mark" />
+          <span class="logo-text">Salonia</span>
         </a>
 
         <nav class="nav-links" id="navLinks">
@@ -112,7 +115,7 @@
               <div class="trust-avatars" aria-hidden="true">
                 <span></span><span></span><span></span>
               </div>
-              <p>Já usado por salões em todo o Brasil</p>
+              <p>Feito para a rotina real de salões de beleza</p>
             </div>
           </div>
 
@@ -165,14 +168,16 @@
               </div>
             </div>
 
-            <!-- Phone mockup (placeholder for real product screenshot) -->
+            <!-- Prévia mobile da página pública de agendamento -->
             <div class="phone-mock phone-mock-hero">
               <div class="phone-notch"></div>
-              <div class="phone-screen" data-placeholder="screenshot-app">
-                <div class="phone-screen-placeholder">
-                  <span class="placeholder-icon">＋</span>
-                  <span>Print da plataforma aqui</span>
-                </div>
+              <div class="phone-screen phone-screen-booking">
+                <div class="booking-brand"><span>S</span><strong>Studio Bella</strong></div>
+                <p class="booking-caption">Escolha um serviço</p>
+                <div class="booking-service"><span>Manicure</span><strong>R$ 35</strong><small>50 min</small></div>
+                <div class="booking-service active"><span>Escova</span><strong>R$ 60</strong><small>1h</small></div>
+                <div class="booking-service"><span>Design</span><strong>R$ 40</strong><small>40 min</small></div>
+                <div class="booking-action">Continuar</div>
               </div>
             </div>
           </div>
@@ -286,28 +291,25 @@
           <div class="steps">
             <div class="step reveal">
               <div class="step-number">01</div>
-              <h3>Cadastre seu salão</h3>
+              <h3>Escolha seu plano</h3>
               <p>
-                Crie sua conta e configure as informações básicas em poucos
-                minutos.
+                Informe seus dados de contato e siga para o pagamento seguro.
               </p>
             </div>
             <div class="step-connector" aria-hidden="true"></div>
             <div class="step reveal reveal-delay-1">
               <div class="step-number">02</div>
-              <h3>Configure agenda e serviços</h3>
+              <h3>Confirme a assinatura</h3>
               <p>
-                Defina horários, profissionais, serviços e preços do jeito que
-                funciona pra você.
+                Finalize sua assinatura no ambiente protegido do Mercado Pago.
               </p>
             </div>
             <div class="step-connector" aria-hidden="true"></div>
             <div class="step reveal reveal-delay-2">
               <div class="step-number">03</div>
-              <h3>Comece a atender</h3>
+              <h3>Conte sobre seu salão</h3>
               <p>
-                Sua agenda pública já fica no ar, pronta para receber os
-                primeiros agendamentos.
+                Após a confirmação, enviamos no seu WhatsApp o formulário completo para criar seu Salonia.
               </p>
             </div>
           </div>
@@ -588,32 +590,31 @@
         <div class="iara-glow" aria-hidden="true"></div>
         <div class="container iara-inner">
           <div class="iara-content reveal">
-            <span class="eyebrow eyebrow-iara">Assistente virtual</span>
-            <h2>Conheça a Iara</h2>
+            <span class="eyebrow eyebrow-iara">Em desenvolvimento</span>
+            <h2>Conheça o futuro da Iara</h2>
             <p class="iara-lead">
-              A assistente que atende seus clientes no WhatsApp enquanto você
-              cuida do salão.
+              Estamos construindo a assistente que atenderá seus clientes no WhatsApp enquanto você cuida do salão.
             </p>
             <ul class="iara-list">
               <li>
                 <span class="iara-check">✓</span>
-                Responde dúvidas dos clientes automaticamente
+                Responderá dúvidas dos clientes automaticamente
               </li>
               <li>
                 <span class="iara-check">✓</span>
-                Confirma horários marcados
+                Confirmará horários marcados
               </li>
               <li>
                 <span class="iara-check">✓</span>
-                Envia lembretes antes do atendimento
+                Enviará lembretes antes do atendimento
               </li>
               <li>
                 <span class="iara-check">✓</span>
-                Em breve: agenda automaticamente pelo WhatsApp
+                Fará agendamentos pelo WhatsApp
               </li>
             </ul>
-            <a href="#planos" class="btn btn-iara btn-lg"
-              >Quero a Iara no meu salão</a
+            <a href="https://wa.me/5585996269742?text=Quero%20ser%20avisada%20quando%20a%20Iara%20estiver%20dispon%C3%ADvel" target="_blank" rel="noopener" class="btn btn-iara btn-lg"
+              >Quero ser avisada</a
             >
           </div>
 
@@ -655,85 +656,67 @@
           </div>
 
           <div class="pricing-grid">
-            <!-- PLANO BÁSICO -->
-            <div class="price-card reveal">
+            <div class="price-card price-card-basic reveal">
+              <span class="plan-status">Plano essencial</span>
               <h3>Salonia</h3>
-
-              <p class="price-desc">Organização completa para o seu salão</p>
-
+              <p class="price-desc">A gestão completa para organizar a rotina do seu salão.</p>
               <div class="price-value">
                 <span class="price-currency">R$</span>49,90
                 <span class="price-period">/mês</span>
               </div>
-
               <ul class="price-features">
-                <li> Agenda ilimitada</li>
-                <li> Cadastro de clientes</li>
-                <li> Profissionais e serviços</li>
-                <li> Página de agendamento público</li>
-                <li> Relatórios básicos</li>
-                <li> Configuração personalizada do salão</li>
-
-                <li class="disabled"> Iara no WhatsApp</li>
-
-                <li class="disabled"> Atendimento automático 24h</li>
-
-                <li class="disabled"> Confirmação automática de horários</li>
-
-                <li class="disabled"> Lembretes para clientes</li>
-
-                <li class="disabled"> Relatórios avançados</li>
+                <li>Agenda ilimitada</li>
+                <li>Cadastro e histórico de clientes</li>
+                <li>Gestão de profissionais e serviços</li>
+                <li>Página pública de agendamento</li>
+                <li>Financeiro e relatórios essenciais</li>
+                <li>Configuração personalizada do salão</li>
+                <li class="disabled">Atendimento com a Iara</li>
               </ul>
-
               <a href="cadastro.html?plan=starter" class="btn btn-outline btn-full">
-                Começar agora
-            </a>
+                Assinar Salonia
+              </a>
             </div>
 
-            <!-- PLANO PREMIUM -->
             <div class="price-card price-card-featured reveal reveal-delay-1">
-              <span class="price-badge">  Mais escolhido </span>
-
-              <h3>Salonia + Iara</h3>
-
-              <p class="price-desc">
-                Seu salão funcionando no automático com uma assistente
-                inteligente
-              </p>
-
-              <div class="price-value">
-                <span class="price-currency">R$</span>89,90
-                <span class="price-period">/mês</span>
-              </div>
-
-              <p class="price-highlight">
-                Tenha uma assistente virtual cuidando dos seus agendamentos
-              </p>
-
+              <span class="price-badge">Plano em destaque</span>
+              <span class="plan-status">Em desenvolvimento</span>
+              <h3>Salonia + Iara Pro</h3>
+              <p class="price-desc">Atendimento automático para transformar conversas em agendamentos.</p>
+              <div class="price-value"><span class="price-coming">Em breve</span></div>
+              <p class="price-highlight">Ideal para automatizar o atendimento diário</p>
               <ul class="price-features">
-                <li> Tudo do plano Salonia</li>
-
-                <li> Iara atendendo clientes pelo WhatsApp</li>
-
-                <li> Respostas automáticas para dúvidas</li>
-
-                <li> Agendamentos pelo WhatsApp</li>
-
-                <li> Confirmação automática de horários</li>
-
-                <li> Lembretes para reduzir faltas</li>
-
-                <li> Relatórios avançados</li>
-
-                <li> Suporte prioritário</li>
-
-                <li> Configuração personalizada do salão</li>
+                <li>Tudo do plano Salonia</li>
+                <li>Iara atendendo pelo WhatsApp</li>
+                <li>Respostas sobre serviços, preços e horários</li>
+                <li>Agendamentos, remarcações e cancelamentos</li>
+                <li>Confirmações e lembretes automáticos</li>
+                <li>Transferência para atendimento humano</li>
+                <li>Relatórios básicos da Iara</li>
               </ul>
-
-              <a href="cadastro.html?plan=pro" class="btn btn-primary btn-full">
-                Começar agora
-            </a>
+              <a href="https://wa.me/5585996269742?text=Quero%20ser%20avisada%20sobre%20a%20Iara%20Pro" target="_blank" rel="noopener" class="btn btn-primary btn-full">Quero ser avisada</a>
             </div>
+
+            <div class="price-card price-card-premium reveal reveal-delay-2">
+              <span class="plan-status">Em desenvolvimento</span>
+              <h3>Salonia + Iara Premium</h3>
+              <p class="price-desc">Automação avançada para recuperar clientes e aumentar a ocupação.</p>
+              <div class="price-value"><span class="price-coming">Em breve</span></div>
+              <p class="price-highlight">Mais automações, análises e prioridade</p>
+              <ul class="price-features">
+                <li>Tudo do plano Iara Pro</li>
+                <li>Maior capacidade de atendimentos</li>
+                <li>Recuperação de clientes inativos</li>
+                <li>Lista de espera para horários vagos</li>
+                <li>Mensagens de aniversário e retorno</li>
+                <li>Relatórios avançados de conversão</li>
+                <li>Fluxos personalizados de atendimento</li>
+                <li>Suporte prioritário</li>
+              </ul>
+              <a href="https://wa.me/5585996269742?text=Quero%20ser%20avisada%20sobre%20a%20Iara%20Premium" target="_blank" rel="noopener" class="btn btn-outline btn-full">Quero ser avisada</a>
+            </div>
+          </div>
+        </div>
       </section>
 
       <!-- FAQ -->
@@ -759,26 +742,23 @@
             </div>
             <div class="faq-item reveal">
               <button class="faq-question">
-                Tem período de teste gratuito?
+                Preciso assinar um contrato longo?
                 <span class="faq-icon">+</span>
               </button>
               <div class="faq-answer">
                 <p>
-                  Sim, você pode testar o Salonia gratuitamente antes de decidir
-                  qual plano faz mais sentido para o seu salão.
+                  Não. A contratação é mensal e sem fidelidade. Você pode cancelar quando quiser.
                 </p>
               </div>
             </div>
             <div class="faq-item reveal">
               <button class="faq-question">
-                Como funciona a Iara no WhatsApp?
+                Quando a Iara estará disponível?
                 <span class="faq-icon">+</span>
               </button>
               <div class="faq-answer">
                 <p>
-                  A Iara se conecta ao WhatsApp do seu salão e responde clientes
-                  automaticamente, confirma horários e envia lembretes, sem que
-                  você precise fazer nada.
+                  A Iara está em desenvolvimento. Você pode entrar na lista de interesse pelo WhatsApp e avisaremos quando ela estiver pronta para uso.
                 </p>
               </div>
             </div>
@@ -815,10 +795,10 @@
         <div class="container final-cta-inner reveal">
           <h2>Pronto para organizar seu salão?</h2>
           <p>
-            Comece gratuitamente hoje e veja a diferença.
+            Escolha seu plano e deixe a configuração com a gente.
           </p>
           <a href="https://wa.me/5585996269742" class="btn btn-primary btn-lg"
-            >Começar gratuitamente</a
+            >Falar com a equipe</a
           >
         </div>
       </section>
@@ -844,8 +824,9 @@
 
         <div class="footer-col">
           <h4>Empresa</h4>
-          <a href="#">Sobre</a>
-          <a href="#">Contato</a>
+          <a href="https://wa.me/5585996269742" target="_blank" rel="noopener">Contato</a>
+          <a href="/privacidade.html">Privacidade</a>
+          <a href="/termos.html">Termos de uso</a>
           <a href="#faq">FAQ</a>
         </div>
 
@@ -855,6 +836,7 @@
             <a
               href="https://www.instagram.com/pedrocha.dev/"
               target="_blank"
+              rel="noopener"
               aria-label="Instagram"
               ><svg viewBox="0 0 24 24" fill="none">
                 <rect
@@ -878,6 +860,7 @@
             <a
               href="https://wa.me/5585996269742"
               target="_blank"
+              rel="noopener"
               aria-label="WhatsApp"
             >
               <svg viewBox="0 0 24 24" fill="none">

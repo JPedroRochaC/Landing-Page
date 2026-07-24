@@ -4,21 +4,28 @@
 
 .pricing-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 28px;
-  max-width: 850px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  max-width: 1180px;
   margin: 0 auto;
-  align-items: center;
+  align-items: stretch;
 }
 
 .price-card {
   background: var(--cream);
-  border: 1px solid var(--border-soft);
+  border: 2px solid var(--border-soft);
   border-radius: var(--radius-lg);
   padding: 36px 30px;
   box-shadow: var(--shadow-md);
   position: relative;
-  transition: 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.price-card-basic {
+  background: linear-gradient(160deg, #fffafc 0%, #f4e4ee 100%);
+  border-color: rgba(100, 21, 70, .16);
 }
 
 .price-card:hover {
@@ -27,17 +34,18 @@
 
 /* Plano Salonia + Iara */
 .price-card-featured {
-  border: 2px solid var(--red);
+  background: linear-gradient(160deg, #f8e9f1 0%, #e8bed3 100%);
+  border-color: var(--red);
 
-  box-shadow: var(--shadow-lg), var(--shadow-red-glow);
+  box-shadow: 0 24px 58px rgba(100, 21, 70, .28), 0 0 0 4px rgba(100, 21, 70, .08);
 
-  transform: scale(1.08);
+  transform: translateY(-10px);
 
   z-index: 2;
 }
 
 .price-card-featured:hover {
-  transform: scale(1.08) translateY(-5px);
+  transform: translateY(-15px);
 }
 
 /* Badge */
@@ -141,6 +149,7 @@
   gap: 12px;
 
   margin-bottom: 28px;
+  flex: 1;
 }
 
 .price-features li {
@@ -186,8 +195,33 @@
 /* Plano premium título maior */
 
 .price-card-featured h3 {
-  font-size: 1.8rem;
+  font-size: 1.45rem;
 }
+
+.price-card-premium {
+  background: linear-gradient(155deg, #641546 0%, #350826 100%);
+  border-color: #7d1c58;
+  box-shadow: 0 18px 42px rgba(53, 8, 38, .28);
+}
+.price-card-premium h3,
+.price-card-premium .price-coming { color: #fff; }
+.price-card-premium .price-desc,
+.price-card-premium .price-features li { color: rgba(255, 255, 255, .82); }
+.price-card-premium .price-highlight { background: rgba(255, 255, 255, .1); color: #f8e9ee; }
+.price-card-premium .plan-status { background: rgba(255, 255, 255, .12); color: #fff; }
+.price-card-premium .price-features li::before { color: #edc2cb; }
+.price-card-premium .btn-outline {
+  background: #fff;
+  border-color: #fff;
+  color: #4a0f34;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, .22);
+}
+.price-card-premium .btn-outline:hover {
+  background: #f5d9e0;
+  color: #350826;
+  border-color: #f5d9e0;
+}
+.plan-status { display: inline-block; align-self: flex-start; margin-bottom: 12px; padding: 5px 10px; border-radius: 999px; background: rgba(100, 21, 70, .08); color: var(--red); font-size: .7rem; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; }
 
 /* Nota */
 
@@ -203,7 +237,13 @@
 
 /* Responsivo */
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
+  .pricing-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 780px; }
+  .price-card-featured { transform: none; }
+  .price-card-featured:hover { transform: translateY(-5px); }
+}
+
+@media (max-width: 720px) {
   .pricing-grid {
     grid-template-columns: 1fr;
 
@@ -213,10 +253,11 @@
   .price-card-featured {
     transform: scale(1);
 
-    order: -1;
+    order: initial;
   }
 
   .price-card-featured:hover {
     transform: translateY(-5px);
   }
 }
+.price-coming { font-size: 2rem; color: var(--red); }

@@ -24,8 +24,6 @@
     .showcase-sidebar { display: flex; overflow-x: auto; gap: 8px; padding: 16px; }
     .showcase-logo { display: none; }
     .showcase-nav-item { flex-shrink: 0; margin-bottom: 0; }
-    .pricing-grid { grid-template-columns: 1fr; max-width: 420px; }
-    .price-card-featured { transform: none; order: -1; }
 }
 
 /* Mobile */
@@ -45,4 +43,23 @@
     .table-row span:nth-child(3), .table-row span:nth-child(4) { font-size: 0.75rem; color: var(--beige-muted); }
     .footer-inner { grid-template-columns: 1fr; gap: 28px; }
     .final-cta-inner h2 { font-size: 1.8rem; }
+    .navbar { padding: 10px 0; }
+    .logo-mark { width: 23px; height: 36px; }
+    .logo-text { font-size: 1.15rem; }
+    .hero-trust { align-items: flex-start; }
+    .phone-mock-hero { width: 164px; }
+    .price-card { padding: 32px 22px; }
+    .whatsapp-balao { display: none; }
+}
+
+@media (max-width: 380px) {
+    .container { padding: 0 16px; }
+    .hero { padding-top: 112px; }
+    .hero-visual { min-height: 350px; }
+    .dashboard-mock { max-width: 270px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
 }
