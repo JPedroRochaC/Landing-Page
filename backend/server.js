@@ -12,9 +12,20 @@ import webhookRoutes from "./routes/webhookRoutes.js";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const app = express();
+const allowedOrigins = new Set([
+    process.env.APP_BASE_URL,
+    ...(process.env.CORS_ORIGINS || "").split(","),
+    "http://localhost:3000",
+].map((origin) => origin?.trim()).filter(Boolean));
 
-app.use(cors());
-app.use(express.json());
+app.disable("x-powered-by");
+app.use(cors({
+    origin(origin, callback) {
+        if (!origin || allowedOrigins.has(origin)) return callback(null, true);
+        return callback(new Error("Origem não permitida."));
+    },
+}));
+app.use(express.json({ limit: "32kb" }));
 
 // só a pasta "public" é servida como arquivo estático — o resto do
 // backend (controllers, services, .env) fica fora do alcance do navegador.
@@ -31,17 +42,12 @@ app.get("/api", (req, res) => {
     });
 });
 
-// link bonito do salão: /:slug e /:slug/agendar servem o mesmo app,
-// que decide o que mostrar lendo a própria URL no navegador.
-app.get("/:slug/agendar", (req, res) => {
-    res.sendFile(path.join(__dirname, "..", "public", "salao", "index.html"));
+// Rotas não encontradas não devem tentar abrir arquivos ausentes.
+app.use((req, res) => {
+    res.status(404).json({ message: "Rota não encontrada." });
 });
 
-app.get("/:slug", (req, res) => {
-    res.sendFile(path.join(__dirname, "..", "public", "salao", "index.html"));
-});
-
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || process.env.SALONIA_PORT || 3000;
 
 app.listen(PORT, () => {
     console.log(`Servidor rodando na porta ${PORT}`);
